@@ -22,6 +22,8 @@ public class BookController {
 
         model.addAttribute("books", bookRepository.findAll());
 
+        // By returning books/list, this is how the Viewer finds
+        // the thymeleaf template to render the HTML to our client.
         return "books/list";
     }
 }
